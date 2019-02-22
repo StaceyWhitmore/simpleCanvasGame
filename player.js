@@ -12,10 +12,7 @@ class Player {
     this._width   = width
     this._x       = 0
     this._y       = 0
-
     this._speed = 5
-
-
 document.addEventListener('keydown', this.keydown.bind(this))
   }
 
@@ -28,15 +25,15 @@ document.addEventListener('keydown', this.keydown.bind(this))
 
   getBorders() {
         return {
-          xMin = this._x;
-          xMax = this._x + this._width
-          //yMin
-          //yMax
+          xMin: this._x,
+          xMax: this._x + this._width,
+          yMin: this._y,
+          yMax: this._y + this._width
         }
   }
 
-  keyDown(e) {
-    let ARROW_MAP[e.keyCode]
+  keydown(e) {
+    let arrow = ARROW_MAP[e.keyCode]
     if (arrow === 'left') {
       this._x -= this._speed
     }

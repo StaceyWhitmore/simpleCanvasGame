@@ -53,8 +53,6 @@ class Game {
 
 
 
-const game = new Game(getElementByTagName('canvas')[0],
-400,
-400)
+ var game = new Game(document.getElementsByTagName('canvas')[0],400,400)
 
 game.play()//play() method must be inherit in canvas ..hmm.
